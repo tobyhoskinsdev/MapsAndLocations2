@@ -100,7 +100,11 @@ public class MapsActivity extends FragmentActivity
         LatLng sydney = new LatLng(-34, 151);
         markerOptionsSydney = new MarkerOptions().position(sydney).title("Marker in Sydney");
         mMap = googleMap;
-
+        //mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        //mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        //mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
+        //mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
         // Add a marker in Sydney and move the camera
 
         mMap.addMarker(markerOptionsSydney);
@@ -123,7 +127,7 @@ public class MapsActivity extends FragmentActivity
         mMap.moveCamera(CameraUpdateFactory.newLatLng(markerOptionsBB.getPosition()));
 
         //Set the Zoom level (0 - 20)
-        mMap.setMinZoomPreference(20.0f);
+        mMap.setMinZoomPreference(19.0f);
 
     }
 
